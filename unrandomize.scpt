@@ -4,7 +4,7 @@ tell application "Finder"
 	set theFiles to every file of theFolder
 	repeat with aFile in theFiles
 		set currentName to name of aFile
-		if isRandomized(currentName) then
+		if (my isRandomized(currentName)) then
 			set name of aFile to (text 9 thru -1 of currentName)
 		end if
 	end repeat

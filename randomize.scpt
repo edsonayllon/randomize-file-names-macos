@@ -4,7 +4,7 @@ tell application "Finder"
 	set theFiles to every file of theFolder
 	repeat with aFile in theFiles
 		set currentName to name of aFile
-		if not isRandomized(currentName) then
+		if not (my isRandomized(currentName)) then
 			set randNum to (random number from 100000 to 999999) as text
 			set name of aFile to randNum & "__" & currentName
 		end if
